@@ -111,7 +111,7 @@ const HomePage = () => {
           />
           <div
             onClick={handleSearch}
-            className="w-8 bg-slate-800 flex rounded-r-[6px] justify-center cursor-pointer items-center"
+            className="w-8 flex bg-slate-800 rounded-r-[6px] justify-center cursor-pointer items-center"
           >
             <img className="h-[16px] w-[16px]" src={search} alt="" />
           </div>

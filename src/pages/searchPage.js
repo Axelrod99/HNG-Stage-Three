@@ -87,7 +87,10 @@ const SearchPage = () => {
             {results.map((result) => (
               <div className="pt-4" key={result.id}>
                 <div className="relative">
-                  <img className="h-[240px] xs:h-[280px] w-full" src={result.img} />
+                  <img
+                    className="h-[240px] xs:h-[280px] w-full"
+                    src={result.img}
+                  />
                   <div className="absolute bottom-3 bg-[#000000ad] text-white py-1 flex justify-center w-full">
                     <p>{result.name}</p>
                   </div>

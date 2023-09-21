@@ -25,12 +25,12 @@ const LoginPage = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       });
-      setIsLoading(false);
+    setIsLoading(false);
   };
 
   return (
     <div className="flex flex-col items-center justify-center h-[100vh]">
-        <p className="text-[36px] text-[#39CDCC]">Log In</p>
+      <p className="text-[36px] text-[#39CDCC]">Log In</p>
       <div className="flex flex-col gap-[24px] w-[85%] sm:w-[60%] lg:w-[40%] mt-[60px]">
         <input
           className="border border-[#545F7D26] h-[50px] text-[#545F7D] rounded-[8px] p-[10px]"
@@ -57,11 +57,13 @@ const LoginPage = () => {
           onClick={onLogin}
           className="text-xs text-white bg-[#39CDCC] h-[48px] flex justify-center items-center font-bold rounded-[8px]"
         >
-          {isLoading ? 'Loading...' : 'LOG IN'}
+          {isLoading ? "Loading..." : "LOG IN"}
         </button>
 
         <div className="flex justify-center w-full text-[12px] text-[#39CDCC]">
-          <p onClick={() => navigate("/Signup")} className="cursor-pointer">Don't have an account?</p>
+          <p onClick={() => navigate("/Signup")} className="cursor-pointer">
+            Don't have an account?
+          </p>
         </div>
       </div>
     </div>
