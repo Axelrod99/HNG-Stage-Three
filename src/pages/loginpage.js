@@ -9,8 +9,10 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onLogin = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -23,6 +25,7 @@ const LoginPage = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       });
+      setIsLoading(false);
   };
 
   return (
@@ -36,10 +39,7 @@ const LoginPage = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <div className="relative">
-          <p className="absolute font-thin cursor-pointer right-2 top-[18px] text-[#39CDCC] text-[12px]">
-            SHOW
-          </p>
+        <div className="">
           <input
             className="border border-[#545F7D26] h-[50px] text-[#545F7D] w-full rounded-[8px] p-[10px]"
             placeholder="Password"
@@ -57,7 +57,7 @@ const LoginPage = () => {
           onClick={onLogin}
           className="text-xs text-white bg-[#39CDCC] h-[48px] flex justify-center items-center font-bold rounded-[8px]"
         >
-          LOG IN
+          {isLoading ? 'Loading...' : 'LOG IN'}
         </button>
 
         <div className="flex justify-center w-full text-[12px] text-[#39CDCC]">
