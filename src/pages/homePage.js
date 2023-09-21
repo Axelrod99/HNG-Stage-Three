@@ -81,7 +81,6 @@ const HomePage = () => {
   const handleSearch = () => {
     const filteredItems = imageArray.filter(
       (item) => item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      // item.img
     );
 
     setResults(filteredItems);
@@ -118,16 +117,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {results.length > 0 && (
-          <ul>
-            <div className="flex justify-end">x</div>
-            {results.map((result) => (
-              <li key={result.id}>
-                <img src={result.img} />
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
 
       <DragDropContext onDragEnd={onDragEnd}>
