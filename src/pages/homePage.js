@@ -16,7 +16,7 @@ import search from "../assets/Search.svg";
 import { auth } from "../config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
+import { signOut } from "firebase/auth"; 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const HomePage = () => {
