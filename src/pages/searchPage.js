@@ -37,7 +37,6 @@ const SearchPage = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);

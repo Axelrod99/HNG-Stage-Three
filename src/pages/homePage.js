@@ -42,7 +42,7 @@ const HomePage = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        console.log("uid", uid);
+        // console.log("uid", uid);
       } else {
         // console.log("user is logged out");
       }
@@ -53,7 +53,6 @@ const HomePage = () => {
     signOut(auth)
       .then(() => {
         navigate("/");
-        console.log("Signed out successfully");
       })
       .catch((error) => {
         // An error happened.
