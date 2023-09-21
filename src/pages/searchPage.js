@@ -56,7 +56,7 @@ const SearchPage = () => {
       <div className="flex w-full ">
         <div
           onClick={() => navigate("/Dashboard")}
-          className="h-[40px] w-[40px] flex justify-center items-center bg-gray-300 rounded-[30px]"
+          className="h-[40px] w-[40px] flex justify-center items-center bg-gray-400 rounded-[30px]"
         >
           <img className="cursor-pointer" src={arrow} />
         </div>
